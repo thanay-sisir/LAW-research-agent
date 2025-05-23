@@ -1,10 +1,10 @@
 from crewai import Crew
-from agents import property_researcher, property_analyst
-from tasks import research_task, analysis_task
+from agents import property_researcher, property_analyst, old_property_researcher
+from tasks import analysis_task,old_research_task, research_task
 
 crew = Crew(
-    agents=[property_researcher],#, property_analyst], 
-    tasks=[research_task],#, analysis_task], 
+    agents=[old_property_researcher,property_analyst], 
+    tasks=[research_task, analysis_task],
     verbose=True
     )
 
